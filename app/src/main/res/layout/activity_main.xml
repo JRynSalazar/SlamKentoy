@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="150dp"
+    android:background="#E5A0ED"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"> <!-- Centers children horizontally -->
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="Cignifi Logo"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#715482"
+        android:fontFamily="sans-serif-medium"
+        android:text="Get started"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
