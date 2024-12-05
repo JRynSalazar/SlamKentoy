@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D4BEE4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#D4BEE4"
+        android:padding="16dp">
+
+        <!-- Title Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Let's talk about faves"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <!-- Favorite Color -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What’s your favorite color?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+
+        <EditText
+            android:id="@+id/etFavoriteColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your favorite color"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Favorite Food -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What’s your favorite food?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etFavoriteFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your favorite food"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Favorite Movie/TV Show -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What’s your favorite movie or TV show?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etFavoriteMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your favorite movie or TV show"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Favorite Hobby -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What’s your favorite hobby?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etFavoriteHobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your favorite hobby"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Do you have any pets? -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do you have any pets? If yes, what are their names?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etPets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your pet's name (if any)"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Favorite Season -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What’s your favorite season?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etFavoriteSeason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your favorite season"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Favorite Celebrity or Role Model -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Who’s your favorite celebrity or role model?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etFavoriteCelebrity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your favorite celebrity or role model"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- One Thing You Can't Live Without -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What’s one thing you can’t live without?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etCantLiveWithout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter something you can't live without"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Dream Vacation Destination -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What’s your dream vacation destination?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="#333333"/>
+        <EditText
+            android:id="@+id/etVacationDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your dream vacation destination"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:inputType="text"/>
+
+        <!-- Button Layout for Save and Next -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center">
+
+            <!-- Previous Button -->
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#9C27B0"
+                android:text="Previous"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <!-- Next Button -->
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#9C27B0"
+                android:text="Next"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

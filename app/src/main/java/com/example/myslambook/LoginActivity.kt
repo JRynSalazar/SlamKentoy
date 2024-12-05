@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
                     // Credentials are correct, navigate to HomeActivity
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
-                    finish()  // Close LoginActivity
+                    finish()
                 } else {
                     // Show error if credentials are incorrect
                     Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
@@ -45,7 +45,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // Handle sign up text click (navigate to CreateAccountActivity)
         binding.signUpText.setOnClickListener {
             val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent)  // Navigate to CreateAccountActivity

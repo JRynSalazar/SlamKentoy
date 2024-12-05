@@ -12,29 +12,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myslambook"
         tools:targetApi="31">
-
-        <!-- HomeActivity: Not exported as it's used internally -->
+        <activity
+            android:name=".DisplayActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".formActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".form1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".form1"
+            android:exported="false" />
+        <activity
+            android:name=".Form2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity"
+            android:exported="false" /> <!-- HomeActivity: Not exported as it's used internally -->
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
-
-        <!-- CreateAccountActivity: Not exported as it's used internally -->
+            android:exported="false" /> <!-- CreateAccountActivity: Not exported as it's used internally -->
         <activity
             android:name=".CreateAccountActivity"
-            android:exported="false" />
-
-
-        <!-- LoginActivity: Not exported as it's used internally -->
+            android:exported="false" /> <!-- LoginActivity: Not exported as it's used internally -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-
-        <!-- MainActivity: This is the entry point and must be exported -->
+            android:exported="false" /> <!-- MainActivity: This is the entry point and must be exported -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
