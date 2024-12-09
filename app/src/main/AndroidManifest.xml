@@ -13,37 +13,10 @@
         android:theme="@style/Theme.Myslambook"
         tools:targetApi="31">
         <activity
-            android:name=".DisplayActivity3"
+            android:name=".AboutMe"
             android:exported="false" />
         <activity
-            android:name=".DisplayActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".DisplayActivity1"
-            android:exported="false" />
-        <activity
-            android:name=".FormActivity3"
-            android:exported="false" />
-        <activity
-            android:name=".FormActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".FormActivity1"
-            android:exported="false" />
-        <activity
-            android:name=".formActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".form1Activity"
-            android:exported="false" />
-        <activity
-            android:name=".form1"
-            android:exported="false" />
-        <activity
-            android:name=".Form2Activity"
-            android:exported="false" />
-        <activity
-            android:name=".FormActivity"
+            android:name=".FriendEditor"
             android:exported="false" /> <!-- HomeActivity: Not exported as it's used internally -->
         <activity
             android:name=".HomeActivity"
