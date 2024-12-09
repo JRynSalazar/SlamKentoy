@@ -1,39 +1,30 @@
 package com.example.myslambook
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+
+@Parcelize
 data class SlambookEntry(
-
-    var fullName: String = "",
-    var nickname: String = "",
-    var birthday: String = "",
-    var gender: String = "", // Can be "Male", "Female", "Other"
-    var status: String = "",
-    var zodiacSign: String = "",
-    var address: String = "",
-    var contactNumber: String = "",
-    var profileImageUri: String? = null, // Optional field for the image URI
-
-    // UserFavorites details
-    var favoriteColor: String = "",
-    var favoriteFood: String = "",
-    var favoriteMovie: String = "",
-    var favoriteHobby: String = "",
-    var pets: String = "",  // Name of the pets, if any
-    var favoriteSeason: String = "",
-    var favoriteCelebrity: String = "",
-    var cantLiveWithout: String = "",
-    var vacationDestination: String = "",
-
-    // UserHobbies details
-    var favoriteHobbyFromHobbies: String = "",
-    var booksOrMovies: String = "",
-    var sportOrGame: String = "",
-    var drawingOrPainting: String = "",
-    var funHobby: String = "",
-    var videoGames: String = "",
-    var cookingOrBaking: String = "",
-    var newHobby: String = "",
-    var indoorOrOutdoor: String = "",
-    var hobbyWithFriends: String = ""
-) : Serializable
+    val fullName: String,
+    val birthday: String,
+    val favoriteColor: String,
+    val favoriteFood: String,
+    val favoriteMovie: String,
+    val favoriteHobby: String,
+    val pets: String,
+    val favoriteSeason: String,
+    val favoriteCelebrity: String,
+    val cantLiveWithout: String,
+    val vacationDestination: String,
+    val favoriteHobbyFromHobbies: String,
+    val booksOrMovies: String,
+    val sportOrGame: String,
+    val drawingOrPainting: String,
+    val funHobby: String,
+    val videoGames: String,
+    val cookingOrBaking: String,
+    val newHobby: String,
+    val indoorOrOutdoor: String,
+    val hobbyWithFriends: String
+) : Parcelable
