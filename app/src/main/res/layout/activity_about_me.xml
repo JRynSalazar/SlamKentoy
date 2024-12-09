@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:padding="25dp"
+    tools:context=".AboutMe">
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:hint="Enter Name"
+        android:textSize="20sp"
+        android:background="@drawable/input_field_background"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/name_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name_label"
+        app:layout_constraintTop_toTopOf="@+id/name_label" />
+
+    <!-- Age -->
+    <TextView
+        android:id="@+id/age_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Age:"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_label" />
+
+    <EditText
+        android:id="@+id/age_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:hint="25"
+        android:textSize="20sp"
+        android:background="@drawable/input_field_background"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/age_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/age_label"
+        app:layout_constraintTop_toTopOf="@+id/age_label" />
+
+    <!-- Gender -->
+    <TextView
+        android:id="@+id/gender_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/age_label"
+        app:layout_constraintTop_toBottomOf="@+id/age_label" />
+
+    <EditText
+        android:id="@+id/gender_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:hint="Male"
+        android:textSize="20sp"
+        android:background="@drawable/input_field_background"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gender_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gender_label"
+        app:layout_constraintTop_toTopOf="@+id/gender_label" />
+
+    <!-- Address -->
+    <TextView
+        android:id="@+id/address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/gender_label"
+        app:layout_constraintTop_toBottomOf="@+id/gender_label" />
+
+    <EditText
+        android:id="@+id/address_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:hint="123 Main St, City"
+        android:textSize="20sp"
+        android:background="@drawable/input_field_background"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/address_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/address_label"
+        app:layout_constraintTop_toTopOf="@+id/address_label" />
+
+    <!-- Phone Number -->
+    <TextView
+        android:id="@+id/phone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number:"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/address_label"
+        app:layout_constraintTop_toBottomOf="@+id/address_label" />
+
+    <EditText
+        android:id="@+id/phone_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="555-1234"
+        android:background="@drawable/input_field_background"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone_label"
+        app:layout_constraintTop_toTopOf="@+id/phone_label" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/phone_label"
+        app:layout_constraintTop_toBottomOf="@+id/phone_label" />
+
+    <EditText
+        android:id="@+id/status_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Single"
+        android:textSize="20sp"
+        android:background="@drawable/input_field_background"
+        android:padding="8dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/status_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/status_label"
+        app:layout_constraintTop_toTopOf="@+id/status_label" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
