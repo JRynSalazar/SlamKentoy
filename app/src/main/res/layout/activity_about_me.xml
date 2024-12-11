@@ -1,179 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@drawable/bg_main"
-    android:padding="25dp"
     tools:context=".AboutMe">
-    <TextView
-        android:id="@+id/name_label"
-        android:layout_width="wrap_content"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name:"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="16dp"
+        tools:ignore="UselessParent">
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="About Me"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/name_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:hint="Enter Name"
-        android:textSize="20sp"
-        android:background="@drawable/input_field_background"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/name_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/name_label"
-        app:layout_constraintTop_toTopOf="@+id/name_label" />
 
-    <!-- Age -->
-    <TextView
-        android:id="@+id/age_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Age:"
-        android:layout_marginTop="25dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        <!-- Nickname Label -->
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"
+            android:layout_marginTop="36dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_label" />
+        <TextView
+            android:id="@+id/nickname_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nickname"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileImg"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/age_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:hint="25"
-        android:textSize="20sp"
-        android:background="@drawable/input_field_background"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/age_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/age_label"
-        app:layout_constraintTop_toTopOf="@+id/age_label" />
+        <!-- Nickname Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nickname_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:background="@drawable/input_field_background"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Gender -->
-    <TextView
-        android:id="@+id/gender_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gender:"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="@+id/age_label"
-        app:layout_constraintTop_toBottomOf="@+id/age_label" />
+        <!-- Age Label -->
+        <TextView
+            android:id="@+id/age_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_input_layout"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/gender_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:hint="Male"
-        android:textSize="20sp"
-        android:background="@drawable/input_field_background"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/gender_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/gender_label"
-        app:layout_constraintTop_toTopOf="@+id/gender_label" />
+        <!-- Age Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/age_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/age_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/age_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:background="@drawable/input_field_background"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Address -->
-    <TextView
-        android:id="@+id/address_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address:"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="@+id/gender_label"
-        app:layout_constraintTop_toBottomOf="@+id/gender_label" />
+        <!-- Gender Label and Spinner -->
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/age_input_layout"
+            android:layout_marginBottom="8dp" />
 
-    <EditText
-        android:id="@+id/address_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:hint="123 Main St, City"
-        android:textSize="20sp"
-        android:background="@drawable/input_field_background"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/address_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/address_label"
-        app:layout_constraintTop_toTopOf="@+id/address_label" />
+        <Spinner
+            android:id="@+id/gender_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/gender_options"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gender_label" />
 
-    <!-- Phone Number -->
-    <TextView
-        android:id="@+id/phone_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone Number:"
-        android:textSize="20sp"
-        android:layout_marginTop="25dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/address_label"
-        app:layout_constraintTop_toBottomOf="@+id/address_label" />
+        <!-- Address Label -->
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gender_spinner"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/phone_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="555-1234"
-        android:background="@drawable/input_field_background"
-        android:padding="8dp"
-        android:textSize="20sp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/phone_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/phone_label"
-        app:layout_constraintTop_toTopOf="@+id/phone_label" />
+        <!-- Address Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:background="@drawable/input_field_background" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Status -->
-    <TextView
-        android:id="@+id/status_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Status:"
-        android:textSize="20sp"
-        android:layout_marginTop="25dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/phone_label"
-        app:layout_constraintTop_toBottomOf="@+id/phone_label" />
+        <!-- Phone Number Label -->
+        <TextView
+            android:id="@+id/phone_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_input_layout"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/status_value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Single"
-        android:textSize="20sp"
-        android:background="@drawable/input_field_background"
-        android:padding="8dp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/status_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/status_label"
-        app:layout_constraintTop_toTopOf="@+id/status_label" />
+        <!-- Phone Number Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:background="@drawable/input_field_background" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/status_value" />
+        <!-- Status Label and Spinner -->
+        <TextView
+            android:id="@+id/status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_input_layout"
+            android:layout_marginBottom="8dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Spinner
+            android:id="@+id/status_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/status_options"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_label" />
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Save"
+            android:textSize="16sp"
+            android:paddingHorizontal="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_spinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

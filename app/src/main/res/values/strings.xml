@@ -2,4 +2,22 @@
     <string name="app_name">Myslambook</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <string-array name="gender_options">
+            <item>Select</item>
+            <item>Male</item>
+            <item>Female</item>
+            <item>Others</item>
+        </string-array>
+
+        <string-array name="status_options">
+            <item>Select</item>
+            <item>Single</item>
+            <item>Married</item>
+            <item>Divorced</item>
+            <item>Widowed</item>
+        </string-array>
+
 </resources>
+
+

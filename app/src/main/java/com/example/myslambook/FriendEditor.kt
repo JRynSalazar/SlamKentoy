@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import com.example.myslambook.databinding.ActivityFriendEditorBinding
 
 class FriendEditor : AppCompatActivity() {
@@ -60,7 +61,9 @@ class FriendEditor : AppCompatActivity() {
     private fun saveFriendData() {
         val updatedFriend = SlambookEntry(
             fullName = binding.nameAcc.text.toString(),
-            birthday = binding.bday.text.toString(),
+            age = binding.age.text.toString(),
+            gender = binding.gender.selectedItem.toString(),
+            address = binding.address.toString(),
             favoriteColor = binding.etFavoriteColor.text.toString(),
             favoriteFood = binding.etFavoriteFood.text.toString(),
             favoriteMovie = binding.etFavoriteMovie.text.toString(),
@@ -84,13 +87,16 @@ class FriendEditor : AppCompatActivity() {
         val resultIntent = Intent()
         resultIntent.putExtra("updated_friend", updatedFriend)
         setResult(Activity.RESULT_OK, resultIntent)
-        finish()
+        val toHome = Intent(this, HomeActivity::class.java)
+        startActivity(toHome)
+       // finish()
     }
 
     private fun loadFriendData() {
         friend?.let {
             binding.nameAcc.setText(it.fullName)
-            binding.bday.setText(it.birthday)
+            binding.age.setText(it.age)
+            binding.address.setText(it.address)
             binding.etFavoriteColor.setText(it.favoriteColor)
             binding.etFavoriteFood.setText(it.favoriteFood)
             binding.etFavoriteMovie.setText(it.favoriteMovie)

@@ -28,14 +28,13 @@
 
             <!-- Profile Picture -->
             <ImageView
-                android:id="@+id/profilePicture"
+                android:id="@+id/profile"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/circle_background"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_profile"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,8 +48,8 @@
                 android:text="Hi, WelcomeBack"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
-                app:layout_constraintStart_toEndOf="@id/profilePicture"
-                app:layout_constraintTop_toTopOf="@id/profilePicture" />
+                app:layout_constraintStart_toEndOf="@id/profile"
+                app:layout_constraintTop_toTopOf="@id/profile" />
 
             <!-- Name Text -->
             <TextView
@@ -64,12 +63,12 @@
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@id/profilePicture"
+                app:layout_constraintStart_toEndOf="@id/profile"
                 app:layout_constraintTop_toBottomOf="@id/welcomeText" />
 
             <!-- Settings Icon -->
             <ImageView
-                android:id="@+id/settingsIcon"
+                android:id="@+id/lagOut"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginTop="16dp"

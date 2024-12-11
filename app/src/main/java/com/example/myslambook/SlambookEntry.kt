@@ -7,7 +7,9 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class SlambookEntry(
     val fullName: String,
-    val birthday: String,
+    val age: String,
+    val gender: String,
+    val address: String,
     val favoriteColor: String,
     val favoriteFood: String,
     val favoriteMovie: String,

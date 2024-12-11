@@ -8,57 +8,143 @@
     android:background="@drawable/bg_main"
     tools:context=".FriendEditor">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@drawable/bg_main"
+        tools:context=".AboutMe">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCard"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/profileImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/male_ic" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Nickname -->
+            <TextView
+                android:id="@+id/nickname_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/profileCard"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/nameAcc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Name"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/nickname_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Age -->
+            <TextView
+                android:id="@+id/age_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Age"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/nameAcc"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Age"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/age_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Gender -->
+            <TextView
+                android:id="@+id/gender_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gender"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/age"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/gender_options"
+                app:layout_constraintTop_toBottomOf="@id/gender_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Address -->
+            <TextView
+                android:id="@+id/address_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Address"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/gender"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Address"
+                android:inputType="textPostalAddress"
+                app:layout_constraintTop_toBottomOf="@id/address_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="50dp"/>
 
 
-    <ImageView
-        android:id="@+id/profileImg"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="25dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/male_ic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
-    <EditText
-        android:id="@+id/nameAcc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:hint="Enter your Name"
-        android:textColor="@color/black"
-        android:inputType="text"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bday"
-        app:layout_constraintStart_toEndOf="@+id/profileImg"
-        app:layout_constraintTop_toTopOf="@+id/profileImg" />
-
-
-    <EditText
-        android:id="@+id/bday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Enter your Birthday"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="@+id/profileImg"
-        app:layout_constraintStart_toStartOf="@+id/nameAcc" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="visible"
         app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319"
-        android:visibility="visible">
+        app:layout_constraintVertical_bias="0.706"
+        android:layout_marginTop="80dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,22 +154,22 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
+
         <ImageButton
             android:id="@+id/igmFav"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="fitCenter"
             android:background="@android:color/transparent"
+
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_fav"
             android:visibility="visible" />
-
 
         <ScrollView
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:animateLayoutChanges="true"
-            >
+            android:animateLayoutChanges="true">
 
             <LinearLayout
                 android:id="@+id/favCard"
@@ -91,8 +177,8 @@
                 android:layout_height="wrap_content"
                 android:background="#D4BEE4"
                 android:orientation="vertical"
-                android:visibility="gone"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:visibility="gone">
 
                 <!-- Title Text -->
                 <TextView
@@ -312,13 +398,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:visibility="visible"
         app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="visible"
-        app:layout_constraintVertical_bias="0.566">
+        app:layout_constraintVertical_bias="0.707"
+        android:layout_marginTop="80dp">
 
 
         <TextView
@@ -335,17 +424,16 @@
             android:id="@+id/imgHob"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_hob"
-            android:scaleType="fitCenter"
             android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_hob"
             android:visibility="visible" />
 
         <ScrollView
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:animateLayoutChanges="true"
-            >
+            android:animateLayoutChanges="true">
 
             <LinearLayout
                 android:id="@+id/HobCard"

@@ -35,6 +35,13 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         db.close()
         return isValid
     }
+    // In DatabaseHelper.kt
+    fun isUsernameExist(username: String): Boolean {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM users WHERE username = ?", arrayOf(username))
+        return cursor.count > 0
+    }
+
 
     companion object {
         const val DATABASE_NAME = "UserDB"
